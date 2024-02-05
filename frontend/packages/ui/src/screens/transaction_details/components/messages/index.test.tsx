@@ -42,7 +42,7 @@ describe('screen: TransactionDetails/ Messages', () => {
               '@type': '/cosmos.bank.v1beta1.MsgSend',
               amount: [
                 {
-                  denom: 'udaric',
+                  denom: 'ucft',
                   amount: '1100000',
                 },
               ],

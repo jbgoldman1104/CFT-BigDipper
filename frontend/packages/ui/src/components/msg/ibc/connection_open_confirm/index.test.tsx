@@ -23,7 +23,7 @@ describe('screen: TransactionDetails/IBCConnectionOpenConfirm', () => {
       connection_id: '1',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

@@ -24,7 +24,7 @@ describe('screen: TransactionDetails/IBCConnectionOpenAck', () => {
       counterparty_connection_id: '21',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

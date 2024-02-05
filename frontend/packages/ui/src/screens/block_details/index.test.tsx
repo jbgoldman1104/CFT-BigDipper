@@ -48,7 +48,7 @@ const mockAverageBlockTime = jest.fn().mockReturnValue({
           {
             '@type': '/cosmos.staking.v1beta1.MsgDelegate',
             amount: {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '27466368',
             },
             delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',

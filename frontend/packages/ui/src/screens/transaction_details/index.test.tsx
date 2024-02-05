@@ -52,7 +52,7 @@ const mockTransactionDetailsDocument = jest.fn().mockReturnValue({
           payer: '',
           amount: [
             {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '50',
             },
           ],
@@ -67,7 +67,7 @@ const mockTransactionDetailsDocument = jest.fn().mockReturnValue({
           {
             '@type': '/cosmos.staking.v1beta1.MsgDelegate',
             amount: {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '8371578',
             },
             delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',
@@ -124,7 +124,7 @@ const mockTransactionDetailsDocument = jest.fn().mockReturnValue({
                   },
                   {
                     key: 'amount',
-                    value: '3094654udaric',
+                    value: '3094654ucft',
                   },
                 ],
               },
@@ -132,7 +132,7 @@ const mockTransactionDetailsDocument = jest.fn().mockReturnValue({
           },
         ],
         rawLog:
-          '[{"events":[{"type":"delegate","attributes":[{"key":"validator","value":"desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3"},{"key":"amount","value":"8371578"}]},{"type":"message","attributes":[{"key":"action","value":"delegate"},{"key":"sender","value":"desmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8n8fv78"},{"key":"module","value":"staking"},{"key":"sender","value":"desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr"},{"key":"sender","value":"desmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8n8fv78"},{"key":"amount","value":"3094654udaric"}]}]}]',
+          '[{"events":[{"type":"delegate","attributes":[{"key":"validator","value":"desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3"},{"key":"amount","value":"8371578"}]},{"type":"message","attributes":[{"key":"action","value":"delegate"},{"key":"sender","value":"desmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8n8fv78"},{"key":"module","value":"staking"},{"key":"sender","value":"desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr"},{"key":"sender","value":"desmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8n8fv78"},{"key":"amount","value":"3094654ucft"}]}]}]',
       },
     ],
   },

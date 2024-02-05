@@ -116,14 +116,14 @@ const mockValidatorsDocument = jest.fn().mockReturnValue({
         delegations: [
           {
             amount: {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '1704000',
             },
             delegatorAddress: 'desmos12mu43g2qvdddfc3tpgr3pekkrdx23jgv36jlta',
           },
           {
             amount: {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '21000000',
             },
             delegatorAddress: 'desmos1njm853h4h9vh8xge3v9mf7nnukzhgt6zyqxyfr',
@@ -161,14 +161,14 @@ const mockValidatorsDocument = jest.fn().mockReturnValue({
         delegations: [
           {
             amount: {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '14000000',
             },
             delegatorAddress: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',
           },
           {
             amount: {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '30000000',
             },
             delegatorAddress: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',

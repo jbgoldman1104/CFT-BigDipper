@@ -38,7 +38,7 @@ describe('screen: TransactionDetails/CreateValidator', () => {
         key: 'key',
       },
       value: {
-        denom: 'udaric',
+        denom: 'ucft',
         amount: '10000000',
       },
     });

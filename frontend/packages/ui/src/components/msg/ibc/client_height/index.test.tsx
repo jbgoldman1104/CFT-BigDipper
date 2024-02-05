@@ -22,7 +22,7 @@ describe('screen: TransactionDetails/IBCHeight', () => {
       signer: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

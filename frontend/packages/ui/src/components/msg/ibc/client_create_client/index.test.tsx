@@ -23,7 +23,7 @@ describe('screen: TransactionDetails/IBCCreateClient', () => {
       chain_id: 'chain-1',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

@@ -92,17 +92,17 @@ describe('utils: formatNumber', () => {
 
 describe('utils: formatToken', () => {
   it('format correctly #1', async () => {
-    const results = formatToken(654654, 'udaric');
+    const results = formatToken(654654, 'ucft');
     expect(results.value).toBe('0.654654');
-    expect(results.baseDenom).toBe('udaric');
-    expect(results.displayDenom).toBe('daric');
+    expect(results.baseDenom).toBe('ucft');
+    expect(results.displayDenom).toBe('cft');
   });
 
   it('format correctly #2', async () => {
-    const results = formatToken('1000001', 'udaric');
+    const results = formatToken('1000001', 'ucft');
     expect(results.value).toBe('1.000001');
-    expect(results.baseDenom).toBe('udaric');
-    expect(results.displayDenom).toBe('daric');
+    expect(results.baseDenom).toBe('ucft');
+    expect(results.displayDenom).toBe('cft');
   });
 
   it('format correctly #3', async () => {

@@ -21,7 +21,7 @@ describe('screen: TransactionDetails/Undelegate', () => {
       delegator_address: 'delegatorAddress',
       validator_address: 'validatorAddress',
       amount: {
-        denom: 'udaric',
+        denom: 'ucft',
         amount: '1000000000',
       },
     });

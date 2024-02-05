@@ -22,13 +22,13 @@ describe('screen: TransactionDetails/IBCTransfer', () => {
       sender: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       receiver: 'desmos1qttd3g665gqm4yx26l6pqqal7y5pqlatty22nz',
       token: {
-        denom: 'udaric',
+        denom: 'ucft',
         amount: '2000000',
       },
       source_channel: 'channel-2',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

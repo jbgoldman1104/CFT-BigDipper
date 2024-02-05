@@ -77,7 +77,7 @@ exports[`screen: BlockDetails matches snapshot 1`] = `
                   {
                     "amount": {
                       "amount": "27466368",
-                      "denom": "udaric",
+                      "denom": "ucft",
                     },
                     "category": "staking",
                     "delegatorAddress": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
@@ -85,7 +85,7 @@ exports[`screen: BlockDetails matches snapshot 1`] = `
                       "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                       "amount": {
                         "amount": "27466368",
-                        "denom": "udaric",
+                        "denom": "ucft",
                       },
                       "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                       "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",

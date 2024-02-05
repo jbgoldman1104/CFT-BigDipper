@@ -20,7 +20,7 @@ describe('screen: TransactionDetails/MsgMultiSend', () => {
           address: 'address',
           coins: [
             {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '20000000',
             },
           ],
@@ -31,7 +31,7 @@ describe('screen: TransactionDetails/MsgMultiSend', () => {
           address: 'output1',
           coins: [
             {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '19000000',
             },
           ],
@@ -40,7 +40,7 @@ describe('screen: TransactionDetails/MsgMultiSend', () => {
           address: 'output2',
           coins: [
             {
-              denom: 'udaric',
+              denom: 'ucft',
               amount: '1000000',
             },
           ],
@@ -58,7 +58,7 @@ describe('screen: TransactionDetails/MsgMultiSend', () => {
     expect(
       component.root.findByProps({ i18nKey: 'message_contents:txMultisendContentOne' }).props.values
         .amount
-    ).toEqual('20 DARIC');
+    ).toEqual('20 CFT');
   });
 
   afterEach(() => {

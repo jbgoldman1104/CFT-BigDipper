@@ -21,7 +21,7 @@ describe('screen: TransactionDetails/Fund', () => {
       depositor: 'depositor',
       amount: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

@@ -22,7 +22,7 @@ describe('screen: TransactionDetails/IBCChannelAcknowledgement', () => {
       source_channel: 'channel-2',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

@@ -25,7 +25,7 @@ describe('screen: TransactionDetails/IBCChannelOpenTry', () => {
       counterparty_version: '1.0',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

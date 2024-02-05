@@ -22,7 +22,7 @@ describe('screen: TransactionDetails/MsgSend', () => {
       to_address: 'toAddress',
       amount: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '200000000',
         },
       ],
@@ -31,7 +31,7 @@ describe('screen: TransactionDetails/MsgSend', () => {
         to: 'toAddress',
         amount: [
           {
-            denom: 'udaric',
+            denom: 'ucft',
             amount: '200000000',
           },
         ],

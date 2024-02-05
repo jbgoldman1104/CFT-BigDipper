@@ -54,8 +54,8 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
           {
             "error": "",
             "fee": {
-              "baseDenom": "udaric",
-              "displayDenom": "daric",
+              "baseDenom": "ucft",
+              "displayDenom": "cft",
               "exponent": 6,
               "value": "0.000050",
             },
@@ -78,7 +78,7 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
             {
               "amount": {
                 "amount": "8371578",
-                "denom": "udaric",
+                "denom": "ucft",
               },
               "category": "staking",
               "delegatorAddress": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
@@ -86,7 +86,7 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
                 "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                 "amount": {
                   "amount": "8371578",
-                  "denom": "udaric",
+                  "denom": "ucft",
                 },
                 "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                 "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
@@ -152,7 +152,7 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
                     },
                     {
                       "key": "amount",
-                      "value": "3094654udaric",
+                      "value": "3094654ucft",
                     },
                   ],
                   "type": "transfer",

@@ -26,8 +26,8 @@ describe('screen: BlockDetails/Overview', () => {
             timestamp: '',
             fee: {
               value: '5000',
-              baseDenom: 'udaric',
-              displayDenom: 'daric',
+              baseDenom: 'ucft',
+              displayDenom: 'cft',
               exponent: 6,
             },
             gasUsed: 0,

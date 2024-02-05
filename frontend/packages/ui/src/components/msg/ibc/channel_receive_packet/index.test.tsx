@@ -24,7 +24,7 @@ describe('screen: TransactionDetails/IBCReceivePacket', () => {
       destination_channel: 'channel-21',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

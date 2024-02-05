@@ -33,7 +33,7 @@ describe('screen: BlockDetails/Transactions', () => {
                   {
                     '@type': '/cosmos.staking.v1beta1.MsgDelegate',
                     amount: {
-                      denom: 'udaric',
+                      denom: 'ucft',
                       amount: '8371578',
                     },
                     delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',
@@ -42,7 +42,7 @@ describe('screen: BlockDetails/Transactions', () => {
                   {
                     '@type': '/cosmos.staking.v1beta1.MsgDelegate',
                     amount: {
-                      denom: 'udaric',
+                      denom: 'ucft',
                       amount: '1233',
                     },
                     delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',
@@ -63,7 +63,7 @@ describe('screen: BlockDetails/Transactions', () => {
                   {
                     '@type': '/cosmos.staking.v1beta1.MsgDelegate',
                     amount: {
-                      denom: 'udaric',
+                      denom: 'ucft',
                       amount: '44444',
                     },
                     delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',
@@ -72,7 +72,7 @@ describe('screen: BlockDetails/Transactions', () => {
                   {
                     '@type': '/cosmos.staking.v1beta1.MsgDelegate',
                     amount: {
-                      denom: 'udaric',
+                      denom: 'ucft',
                       amount: '12211',
                     },
                     delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',
@@ -81,7 +81,7 @@ describe('screen: BlockDetails/Transactions', () => {
                   {
                     '@type': '/cosmos.staking.v1beta1.MsgDelegate',
                     amount: {
-                      denom: 'udaric',
+                      denom: 'ucft',
                       amount: '11111',
                     },
                     delegator_address: 'desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr',

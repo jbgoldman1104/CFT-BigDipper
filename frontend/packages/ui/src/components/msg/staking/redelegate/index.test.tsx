@@ -22,7 +22,7 @@ describe('screen: TransactionDetails/Redelegate', () => {
       validator_src_address: 'validatorSrcAddress',
       validator_dst_address: 'validatorDstAddress',
       amount: {
-        denom: 'udaric',
+        denom: 'ucft',
         amount: '1000000000',
       },
     });

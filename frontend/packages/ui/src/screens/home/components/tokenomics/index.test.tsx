@@ -42,7 +42,7 @@ const mockTokenomics = jest.fn().mockReturnValue({
       {
         coins: [
           {
-            denom: 'udaric',
+            denom: 'ucft',
             amount: '7987725829900',
           },
           {

@@ -21,7 +21,7 @@ describe('screen: TransactionDetails/MsgDelegate', () => {
       delegator_address: 'delegatorAddress',
       validator_address: 'validatorAddress',
       amount: {
-        denom: 'udaric',
+        denom: 'ucft',
         amount: '10000000',
       },
     });

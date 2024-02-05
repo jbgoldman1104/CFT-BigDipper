@@ -29,7 +29,7 @@ describe('screen: TransactionDetails/SubmitProposal', () => {
   //     proposer: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
   //     initial_deposit: [
   //       {
-  //         denom: 'udaric',
+  //         denom: 'ucft',
   //         amount: '2000000',
   //       },
   //     ],
@@ -50,7 +50,7 @@ describe('screen: TransactionDetails/SubmitProposal', () => {
       proposer: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       initial_deposit: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '1000000',
         },
       ],
@@ -90,7 +90,7 @@ describe('screen: TransactionDetails/SubmitProposal', () => {
       proposer: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       initial_deposit: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],
@@ -130,7 +130,7 @@ describe('screen: TransactionDetails/SubmitProposal', () => {
       proposer: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       initial_deposit: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],
@@ -157,7 +157,7 @@ describe('screen: TransactionDetails/SubmitProposal', () => {
       recipient: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       amount: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],
@@ -170,7 +170,7 @@ describe('screen: TransactionDetails/SubmitProposal', () => {
       proposer: 'desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz',
       initial_deposit: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

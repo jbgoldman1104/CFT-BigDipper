@@ -88,7 +88,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
                 "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                 "amount": {
                   "amount": "8371578",
-                  "denom": "udaric",
+                  "denom": "ucft",
                 },
                 "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                 "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
@@ -97,7 +97,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
                 "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                 "amount": {
                   "amount": "1233",
-                  "denom": "udaric",
+                  "denom": "ucft",
                 },
                 "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                 "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
@@ -120,7 +120,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
                 "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                 "amount": {
                   "amount": "44444",
-                  "denom": "udaric",
+                  "denom": "ucft",
                 },
                 "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                 "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
@@ -129,7 +129,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
                 "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                 "amount": {
                   "amount": "12211",
-                  "denom": "udaric",
+                  "denom": "ucft",
                 },
                 "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                 "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
@@ -138,7 +138,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
                 "@type": "/cosmos.staking.v1beta1.MsgDelegate",
                 "amount": {
                   "amount": "11111",
-                  "denom": "udaric",
+                  "denom": "ucft",
                 },
                 "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
                 "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",

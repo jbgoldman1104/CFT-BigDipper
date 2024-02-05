@@ -249,11 +249,11 @@
         "validator": "desmosvaloper",
         "account": "desmos"
       },
-      "primaryTokenUnit": "udaric",
-      "votingPowerTokenUnit": "udaric",
+      "primaryTokenUnit": "ucft",
+      "votingPowerTokenUnit": "ucft",
       "tokenUnits": {
-        "udaric": {
-          "display": "daric",
+        "ucft": {
+          "display": "cft",
           "exponent": 6
         }
       },

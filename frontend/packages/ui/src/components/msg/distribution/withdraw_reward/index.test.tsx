@@ -23,7 +23,7 @@ describe('screen: TransactionDetails/WithdrawReward', () => {
       amounts: [
         {
           value: '3000000',
-          displayDenom: 'udaric',
+          displayDenom: 'ucft',
           exponent: 6,
         },
       ],

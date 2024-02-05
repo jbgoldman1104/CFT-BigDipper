@@ -23,7 +23,7 @@ describe('screen: TransactionDetails/IBCUpgradeClient', () => {
       client_id: '1',
       json: [
         {
-          denom: 'udaric',
+          denom: 'ucft',
           amount: '2000000',
         },
       ],

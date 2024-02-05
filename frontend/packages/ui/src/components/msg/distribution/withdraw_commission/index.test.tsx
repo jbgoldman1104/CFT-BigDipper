@@ -22,7 +22,7 @@ describe('screen: TransactionDetails/WithdrawCommission', () => {
       amounts: [
         {
           value: '3000000',
-          displayDenom: 'udaric',
+          displayDenom: 'ucft',
           exponent: 6,
         },
       ],

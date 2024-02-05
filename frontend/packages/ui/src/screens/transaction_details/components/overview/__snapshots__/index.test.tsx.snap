@@ -38,7 +38,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
         "label": "time",
       },
       {
-        "detail": "5,000 DARIC",
+        "detail": "5,000 CFT",
         "key": "fee",
         "label": "fee",
       },
