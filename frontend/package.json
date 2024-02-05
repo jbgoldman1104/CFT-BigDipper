@@ -23,8 +23,7 @@
     "test:ci": "turbo run test --continue",
     "e2e": "playwright test",
     "e2e:install": "playwright install --with-deps",
-    "graphql:codegen": "turbo run graphql:codegen --continue",
-    "postinstall": "husky install"
+    "graphql:codegen": "turbo run graphql:codegen --continue"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
