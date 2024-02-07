@@ -24,7 +24,6 @@ select_permissions:
     - proposal_id
     - voter_address
     - option
-    - weight
     - timestamp
     - height
     filter: {}

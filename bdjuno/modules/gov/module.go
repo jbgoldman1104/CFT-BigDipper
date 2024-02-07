@@ -22,6 +22,7 @@ type Module struct {
 	cdc             codec.Codec
 	db              *database.Db
 	source          govsource.Source
+	authModule      AuthModule
 	distrModule     DistrModule
 	inflationModule InflationModule
 	mintModule      MintModule
@@ -32,6 +33,7 @@ type Module struct {
 // NewModule returns a new Module instance
 func NewModule(
 	source govsource.Source,
+	authModule AuthModule,
 	distrModule DistrModule,
 	inflationModule InflationModule,
 	mintModule MintModule,
@@ -43,6 +45,7 @@ func NewModule(
 	return &Module{
 		cdc:             cdc,
 		source:          source,
+		authModule:      authModule,
 		distrModule:     distrModule,
 		inflationModule: inflationModule,
 		mintModule:      mintModule,

@@ -16,7 +16,8 @@ import (
 	"github.com/forbole/bdjuno/v4/database"
 	"github.com/forbole/bdjuno/v4/modules"
 
-	evmosapp "github.com/evmos/evmos/v15/app"
+	"cosmossdk.io/simapp"
+	evmosapp "github.com/evmos/evmos/v14/app"
 )
 
 func main() {
@@ -55,6 +56,7 @@ func main() {
 // This should be edited by custom implementations if needed.
 func getBasicManagers() []module.BasicManager {
 	return []module.BasicManager{
+		simapp.ModuleBasics,
 		evmosapp.ModuleBasics,
 	}
 }
@@ -63,7 +65,5 @@ func getBasicManagers() []module.BasicManager {
 // a specific message.
 // This should be edited by custom implementations if needed.
 func getAddressesParser() messages.MessageAddressesParser {
-	return messages.JoinMessageParsers(
-		messages.CosmosMessageAddressesParser,
-	)
+	return messages.CosmosMessageAddressesParser
 }

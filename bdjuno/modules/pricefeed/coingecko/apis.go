@@ -3,7 +3,7 @@ package coingecko
 import (
 	"encoding/json"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"math"
 	"net/http"
 	"strings"
@@ -51,7 +51,7 @@ func queryCoinGecko(endpoint string, ptr interface{}) error {
 
 	defer resp.Body.Close()
 
-	bz, err := io.ReadAll(resp.Body)
+	bz, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return fmt.Errorf("error while reading response body: %s", err)
 	}

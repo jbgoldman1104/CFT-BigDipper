@@ -3,8 +3,8 @@ package config
 import (
 	"cosmossdk.io/simapp/params"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	ethermint "github.com/evmos/evmos/v15/encoding"
-	evmtypes "github.com/evmos/evmos/v15/x/evm/types"
+	ethermint "github.com/evmos/evmos/v14/encoding"
+	evmtypes "github.com/evmos/evmos/v14/x/evm/types"
 )
 
 // MakeEncodingConfig creates an EncodingConfig to properly handle all the messages

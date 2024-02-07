@@ -132,12 +132,10 @@ func (m *Module) saveValidatorDescription(doc *tmtypes.GenesisDoc, validators st
 // saveValidatorsCommissions save the initial commission for each validator
 func (m *Module) saveValidatorsCommissions(height int64, validators stakingtypes.Validators) error {
 	for _, account := range validators {
-		commissionRate := account.Commission.Rate
-		minSelfDelegation := account.MinSelfDelegation
 		err := m.db.SaveValidatorCommission(types.NewValidatorCommission(
 			account.OperatorAddress,
-			&commissionRate,
-			&minSelfDelegation,
+			&account.Commission.Rate,
+			&account.MinSelfDelegation,
 			height,
 		))
 		if err != nil {

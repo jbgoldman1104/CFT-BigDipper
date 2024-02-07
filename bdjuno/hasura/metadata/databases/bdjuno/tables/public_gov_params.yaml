@@ -5,7 +5,9 @@ select_permissions:
 - permission:
     allow_aggregations: false
     columns:
-    - params
+    - deposit_params
+    - voting_params
+    - tally_params
     - height
     filter: {}
     limit: 1

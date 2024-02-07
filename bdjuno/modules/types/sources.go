@@ -4,27 +4,30 @@ import (
 	"fmt"
 	"os"
 
-	"cosmossdk.io/simapp/params"
-	"github.com/cometbft/cometbft/libs/log"
-	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
-	evmosapp "github.com/evmos/evmos/v15/app"
-	inflationtypes "github.com/evmos/evmos/v15/x/inflation/types"
+	inflationtypes "github.com/evmos/evmos/v14/x/inflation/types"
+
 	"github.com/forbole/juno/v5/node/remote"
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	govtypesv1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1"
+	govtypesv1beta1 "github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/forbole/juno/v5/node/local"
 
-	nodeconfig "github.com/forbole/juno/v5/node/config"
+	"cosmossdk.io/simapp/params"
+	"github.com/cometbft/cometbft/libs/log"
 
+	distrkeeper "github.com/cosmos/cosmos-sdk/x/distribution/keeper"
+	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
+	evmosapp "github.com/evmos/evmos/v14/app"
 	banksource "github.com/forbole/bdjuno/v4/modules/bank/source"
 	localbanksource "github.com/forbole/bdjuno/v4/modules/bank/source/local"
 	remotebanksource "github.com/forbole/bdjuno/v4/modules/bank/source/remote"
 	distrsource "github.com/forbole/bdjuno/v4/modules/distribution/source"
+	localdistrsource "github.com/forbole/bdjuno/v4/modules/distribution/source/local"
 	remotedistrsource "github.com/forbole/bdjuno/v4/modules/distribution/source/remote"
 	govsource "github.com/forbole/bdjuno/v4/modules/gov/source"
 	localgovsource "github.com/forbole/bdjuno/v4/modules/gov/source/local"
@@ -33,6 +36,7 @@ import (
 	localinflationsource "github.com/forbole/bdjuno/v4/modules/inflation/source/local"
 	remoteinflationsource "github.com/forbole/bdjuno/v4/modules/inflation/source/remote"
 	mintsource "github.com/forbole/bdjuno/v4/modules/mint/source"
+	localmintsource "github.com/forbole/bdjuno/v4/modules/mint/source/local"
 	remotemintsource "github.com/forbole/bdjuno/v4/modules/mint/source/remote"
 	slashingsource "github.com/forbole/bdjuno/v4/modules/slashing/source"
 	localslashingsource "github.com/forbole/bdjuno/v4/modules/slashing/source/local"
@@ -40,6 +44,7 @@ import (
 	stakingsource "github.com/forbole/bdjuno/v4/modules/staking/source"
 	localstakingsource "github.com/forbole/bdjuno/v4/modules/staking/source/local"
 	remotestakingsource "github.com/forbole/bdjuno/v4/modules/staking/source/remote"
+	nodeconfig "github.com/forbole/juno/v5/node/config"
 )
 
 type Sources struct {
@@ -57,7 +62,7 @@ func BuildSources(nodeCfg nodeconfig.Config, encodingConfig *params.EncodingConf
 	case *remote.Details:
 		return buildRemoteSources(cfg)
 	case *local.Details:
-		return buildLocalSources(cfg, encodingConfig)
+		return nil, fmt.Errorf("local mode is currently not supported")
 
 	default:
 		return nil, fmt.Errorf("invalid configuration type: %T", cfg)
@@ -72,16 +77,17 @@ func buildLocalSources(cfg *local.Details, encodingConfig *params.EncodingConfig
 
 	app := evmosapp.NewEvmos(
 		log.NewTMLogger(log.NewSyncWriter(os.Stdout)), source.StoreDB, nil, true, map[int64]bool{},
-		cfg.Home, 0, params.EncodingConfig{}, nil, nil,
+		cfg.Home, 0, params.MakeTestEncodingConfig(), nil, nil,
 	)
+
 	sources := &Sources{
-		BankSource: localbanksource.NewSource(source, banktypes.QueryServer(app.BankKeeper)),
-		// DistrSource:     localdistrsource.NewSource(source, distrtypes.QueryServer(app.DistrKeeper)),
-		GovSource:       localgovsource.NewSource(source, govtypesv1.QueryServer(app.GovKeeper)),
+		BankSource:      localbanksource.NewSource(source, banktypes.QueryServer(app.BankKeeper)),
+		DistrSource:     localdistrsource.NewSource(source, distrkeeper.Querier{Keeper: app.DistrKeeper}),
+		GovSource:       localgovsource.NewSource(source, govtypesv1.QueryServer(app.GovKeeper), nil),
 		InflationSource: localinflationsource.NewSource(source, inflationtypes.QueryServer(app.InflationKeeper)),
-		// MintSource:      localmintsource.NewSource(source, minttypes.QueryServer(app.MintKeeper)),
-		SlashingSource: localslashingsource.NewSource(source, slashingtypes.QueryServer(app.SlashingKeeper)),
-		StakingSource:  localstakingsource.NewSource(source, stakingkeeper.Querier{Keeper: &app.StakingKeeper}),
+		MintSource:      localmintsource.NewSource(source, minttypes.QueryServer(nil)), // no MintKeeper available in evmosApp
+		SlashingSource:  localslashingsource.NewSource(source, slashingtypes.QueryServer(app.SlashingKeeper)),
+		StakingSource:   localstakingsource.NewSource(source, stakingkeeper.Querier{Keeper: &app.StakingKeeper}),
 	}
 
 	// Mount and initialize the stores
@@ -117,7 +123,7 @@ func buildRemoteSources(cfg *remote.Details) (*Sources, error) {
 	return &Sources{
 		BankSource:      remotebanksource.NewSource(source, banktypes.NewQueryClient(source.GrpcConn)),
 		DistrSource:     remotedistrsource.NewSource(source, distrtypes.NewQueryClient(source.GrpcConn)),
-		GovSource:       remotegovsource.NewSource(source, govtypesv1.NewQueryClient(source.GrpcConn)),
+		GovSource:       remotegovsource.NewSource(source, govtypesv1.NewQueryClient(source.GrpcConn), govtypesv1beta1.NewQueryClient(source.GrpcConn)),
 		InflationSource: remoteinflationsource.NewSource(source, inflationtypes.NewQueryClient(source.GrpcConn)),
 		MintSource:      remotemintsource.NewSource(source, minttypes.NewQueryClient(source.GrpcConn)),
 		SlashingSource:  remoteslashingsource.NewSource(source, slashingtypes.NewQueryClient(source.GrpcConn)),

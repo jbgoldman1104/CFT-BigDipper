@@ -8,6 +8,7 @@ linters:
   enable:
     - bodyclose
     - deadcode
+    - depguard
     - dogsled
     - gocritic
     - gofmt

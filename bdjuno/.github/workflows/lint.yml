@@ -6,31 +6,24 @@ on:
   pull_request:
   push:
     branches:
-      - chains/*
-      - cosmos/*
+      - master
 
 jobs:
   GolangCI:
     name: golangci-lint
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 6
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Setup Go 🧰
-        uses: actions/setup-go@v4
-        with:
-          go-version: "1.20"
-
-      - name: Compute diff 📜
-        uses: technote-space/get-diff-action@v6.1.2
+      - uses: actions/checkout@v3
+      - uses: technote-space/get-diff-action@v6.1.2
         with:
           SUFFIX_FILTER: |
             .go
             .mod
             .sum
-
-      - name: Run lint ✅
+      - uses: golangci/golangci-lint-action@v3.4.0
+        with:
+          version: v1.50.1
+          args: --timeout 10m
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         if: "env.GIT_DIFF != ''"
-        run: make lint

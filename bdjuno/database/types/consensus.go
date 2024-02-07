@@ -87,11 +87,3 @@ type BlockRow struct {
 	PreCommitsNum   int64          `db:"pre_commits"`
 	Timestamp       time.Time      `db:"timestamp"`
 }
-
-// -------------------------------------------------------------------------------------------------------------------
-
-// BlockHeightAndTimestamp represents last block height and timestamp stored inside the database
-type BlockHeightAndTimestamp struct {
-	Height         int64     `db:"height"`
-	BlockTimestamp time.Time `db:"timestamp"`
-}
