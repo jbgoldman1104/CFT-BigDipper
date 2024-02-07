@@ -9,7 +9,7 @@ chain:
         - consensus
         - feegrant
         - gov
-        - inflation
+        - mint
         - pricefeed
         - slashing
         - staking
