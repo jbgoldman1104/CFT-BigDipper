@@ -9,7 +9,7 @@ chain:
         - consensus
         - feegrant
         - gov
-        - mint
+        - inflation
         - pricefeed
         - slashing
         - staking
@@ -25,6 +25,10 @@ node:
         grpc:
             address: http://localhost:9090
             insecure: true
+# node:
+#     type: local
+#     config:
+#         home: /root/.confid
 parsing:
     workers: 1
     start_height: 1
