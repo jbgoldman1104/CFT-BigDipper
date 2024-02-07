@@ -4,7 +4,7 @@ build/
 # Configuration
 *.toml
 *.json
-config.yaml
+#config.yaml
 
 # Coverage
 coverage.*
